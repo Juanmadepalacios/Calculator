@@ -2,7 +2,6 @@
     height: 820px;
     width: 520px;
     background-image: linear-gradient(to right, orange , yellow);
-    color:black;
     border-radius: 50px;
     
 }
@@ -19,12 +18,14 @@ h1 {
     font-size: 70px;
     margin-bottom: 15px;
     text-align: right;
+    background-color: black;
+    color: blue;
 }
 
-.buttonAC{
+.buttons{
     display: grid;
     grid-gap: 20px;
     grid-template-rows: repeat(5, 1fr);
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     
 }

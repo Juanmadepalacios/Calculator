@@ -1,0 +1,11 @@
+.Button{
+    background: rgb(143, 142, 142);
+    width: 100px;
+    height: 90px;
+    border-radius: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 1000;
+    font-size: 30px;
+}
