@@ -4,6 +4,7 @@
     background-image: linear-gradient(to right, orange , yellow);
     color:black;
     border-radius: 50px;
+    
 }
 
 h1 {
@@ -12,4 +13,18 @@ h1 {
     letter-spacing: 0.10rem;
     text-align: center;
     padding: 2.8rem;
+}
+
+.display {
+    font-size: 70px;
+    margin-bottom: 15px;
+    text-align: right;
+}
+
+.buttonAC{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    
 }
