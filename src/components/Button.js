@@ -1,9 +1,10 @@
-import React from 'react';
+import React from "react";
 
 import "./Button.css";
 
-const Button = ({ value }) => {
-    return <div className="Button">{value}</div>;
+//button values ​​and hood the equal
+const Button = ({ value, type }) => {
+  return <div className={`Button ${value=== '=' ? 'equal' : ''} ${type || ""}`}> {value} </div>;
 };
 
 export default Button;

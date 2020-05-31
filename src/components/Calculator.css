@@ -1,31 +1,30 @@
-.Calculator{
-    height: 820px;
-    width: 520px;
-    background-image: linear-gradient(to right, orange , yellow);
-    border-radius: 50px;
-    
+.Calculator {
+  height: 820px;
+  width: 530px;
+  background-image: linear-gradient(to right, orange, yellow);
+  border-radius: 50px;
+  
 }
 
 h1 {
-    color:green;
-    font-size: 2.0rem;
-    letter-spacing: 0.10rem;
-    text-align: center;
-    padding: 2.8rem;
+  color: green;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  padding: 2.8rem;
 }
 
 .display {
-    font-size: 70px;
-    margin-bottom: 15px;
-    text-align: right;
-    background-color: black;
-    color: blue;
+  font-size: 70px;
+  margin-bottom: 15px;
+  text-align: right;
+  background-color: black;
+  color: blue;
 }
 
-.buttons{
-    display: grid;
-    grid-gap: 20px;
-    grid-template-rows: repeat(5, 1fr);
-    grid-template-columns: repeat(4, 1fr);
-    
+.buttons {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
