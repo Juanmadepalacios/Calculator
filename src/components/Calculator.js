@@ -33,28 +33,78 @@ const Calculator = () => {
     }
     //+ functionality
     if (value === "+") {
+      if (operator != null) {
+      if (operator === "+") {
+        setSave(save + parseFloat(target));
+      } else if (operator === "-") {
+        setSave(save - parseFloat(target));
+      } else if (operator === "÷") {
+        setSave(save / parseFloat(target));
+      } else if (operator === "x") {
+        setSave(save * parseFloat(target));
+      }
+    } else {
       setSave(parseFloat(target));
+    }
+
+      
       setTarget("0");
       setOperator("+");
       return;
     }
     //- functionality
     if (value === "-") {
+      if (operator != null) {
+      if (operator === "+") {
+        setSave(save + parseFloat(target));
+      } else if (operator === "-") {
+        setSave(save - parseFloat(target));
+      } else if (operator === "÷") {
+        setSave(save / parseFloat(target));
+      } else if (operator === "x") {
+        setSave(save * parseFloat(target));
+      }
+    } else {
       setSave(parseFloat(target));
+    }
       setTarget("0");
       setOperator("-");
       return;
     }
     //÷ functionality
     if (value === "÷") {
+      if (operator != null) {
+      if (operator === "+") {
+        setSave(save + parseFloat(target));
+      } else if (operator === "-") {
+        setSave(save - parseFloat(target));
+      } else if (operator === "÷") {
+        setSave(save / parseFloat(target));
+      } else if (operator === "x") {
+        setSave(save * parseFloat(target));
+      }
+    } else {
       setSave(parseFloat(target));
+    }
       setTarget("0");
       setOperator("÷");
       return;
     }
     //x functionality
     if (value === "x") {
+      if (operator != null) {
+      if (operator === "+") {
+        setSave(save + parseFloat(target));
+      } else if (operator === "-") {
+        setSave(save - parseFloat(target));
+      } else if (operator === "÷") {
+        setSave(save / parseFloat(target));
+      } else if (operator === "x") {
+        setSave(save * parseFloat(target));
+      }
+    } else {
       setSave(parseFloat(target));
+    }
       setTarget("0");
       setOperator("x");
       return;
@@ -62,7 +112,6 @@ const Calculator = () => {
     // Validation Operation 
     if (value === "=") {
       if (!operator) return;
-
       if (operator === "+") {
         setTarget((save + parseFloat(target)).toString());
       } else if (operator === "-") {
@@ -72,6 +121,8 @@ const Calculator = () => {
       } else if (operator === "x") {
         setTarget((save * parseFloat(target)).toString());
       }
+
+      
       setSave(null);
       setOperator(null);
       return;
