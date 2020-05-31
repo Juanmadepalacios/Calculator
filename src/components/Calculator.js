@@ -2,22 +2,77 @@ import React, { useState } from "react";
 
 import Button from "./Button";
 import "./Calculator.css";
-
+//useState target button
 const Calculator = () => {
   const [target, setTarget] = useState("0");
+  //useState save button
+  const [save, setSave] = useState(null);
+  //useState operator button
+  const [operator, setOperator] = useState(null);
 
   const handleButton = (value) => () => {
-    const num = parseFloat(value);
-
+    const num = parseFloat(target);
+    //AC functionality
     if (value === "AC") {
       setTarget("0");
+      setSave(null);
+      setOperator(null);
       return;
     }
+    //± functionality
     if (value === "±") {
-        setTarget(( num * -1).toString());
-        return;
+      setTarget((num * -1).toString());
+      return;
+    }
+    //% functionality
+    if (value === "%") {
+      setTarget((num / 100).toString());
+      setSave(null);
+      setOperator(null);
+      return;
+    }
+    //+ functionality
+    if (value === "+") {
+      setSave(parseFloat(target));
+      setTarget("0");
+      setOperator("+");
+      return;
+    }
+    //- functionality
+    if (value === "-") {
+      setSave(parseFloat(target));
+      setTarget("0");
+      setOperator("-");
+      return;
+    }
+    //÷ functionality
+    if (value === "÷") {
+      setSave(parseFloat(target));
+      setTarget("0");
+      setOperator("÷");
+      return;
+    }
+    //x functionality
+    if (value === "×") {
+      setSave(parseFloat(target));
+      setTarget("0");
+      setOperator("×");
+      return;
+    }
+
+    if (value === "=") {
+      if (operator) return;
+
+      if(operator === "+"){
+        setTarget((save + parseFloat(value)).toString());
+      }else if (operator === "-") {
+        setTarget((save + parseFloat(value)).toString());
       }
-    
+      setSave(null);
+      setOperator(null);
+      return;
+
+    }
 
     setTarget(parseFloat(num + value).toString());
   };
