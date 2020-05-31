@@ -53,28 +53,32 @@ const Calculator = () => {
       return;
     }
     //x functionality
-    if (value === "×") {
+    if (value === "x") {
       setSave(parseFloat(target));
       setTarget("0");
-      setOperator("×");
+      setOperator("x");
       return;
     }
-
+    // Validation Operation 
     if (value === "=") {
-      if (operator) return;
+      if (!operator) return;
 
-      if(operator === "+"){
-        setTarget((save + parseFloat(value)).toString());
-      }else if (operator === "-") {
-        setTarget((save + parseFloat(value)).toString());
+      if (operator === "+") {
+        setTarget((save + parseFloat(target)).toString());
+      } else if (operator === "-") {
+        setTarget((save - parseFloat(target)).toString());
+      } else if (operator === "÷") {
+        setTarget((save / parseFloat(target)).toString());
+      } else if (operator === "x") {
+        setTarget((save * parseFloat(target)).toString());
       }
       setSave(null);
       setOperator(null);
       return;
-
-    }
+    };
 
     setTarget(parseFloat(num + value).toString());
+  
   };
   // building the calculator structure
   return (
