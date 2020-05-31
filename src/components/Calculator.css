@@ -3,7 +3,8 @@
   width: 530px;
   background-image: linear-gradient(to right, orange, yellow);
   border-radius: 50px;
-  
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h1 {
@@ -27,4 +28,7 @@ h1 {
   grid-gap: 20px;
   grid-template-rows: repeat(5, 1fr);
   grid-template-columns: repeat(4, 1fr);
+  float: inherit;
+  width: 300px;
+  transform: translate(10%, 0%);
 }
