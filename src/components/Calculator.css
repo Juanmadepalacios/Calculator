@@ -1,3 +1,4 @@
+/*calculator design*/
 .Calculator {
   height: 840px;
   width: 520px;
@@ -6,7 +7,7 @@
   margin-left: auto;
   margin-right: auto;
 }
-
+/*title design*/
 h1 {
   background: -webkit-linear-gradient(rgb(221, 156, 17), rgb(223, 226, 17));
   -webkit-background-clip: text;
@@ -16,14 +17,13 @@ h1 {
   text-align: center;
 }
 
-
-  img {
-    position: relative;
-    top: 15px; /* ajustar los valores para mover la imagen */
-    left: 220px;
-
+/*image position*/
+img {
+  position: relative;
+  top: 15px;
+  left: 220px;
 }
-
+/*display design*/
 .display {
   font-size: 75px;
   margin-bottom: 15px;
@@ -31,9 +31,9 @@ h1 {
   background-color: black;
   color: yellowgreen;
   width: 490px;
-  
+  overflow: hidden;
 }
-
+/*estructure buttons design*/
 .buttons {
   display: grid;
   grid-gap: 20px;
@@ -43,5 +43,3 @@ h1 {
   width: 300px;
   transform: translate(10%, 0%);
 }
-
-

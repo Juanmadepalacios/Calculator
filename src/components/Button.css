@@ -1,26 +1,40 @@
 /*buttons design*/
-.Button{
-    background: rgb(143, 142, 142);
-    width: 100px;
-    height: 90px;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 750;
-    font-size: 45px;
-    font-family: 'Lucida Sans';
+.Button {
+  background: rgb(143, 142, 142);
+  width: 100px;
+  height: 90px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 750;
+  font-size: 45px;
+  font-family: "Lucida Sans";
 }
-/*equal design*/
-.Button.equal {
-    width: 220px;
-    grid-column: 3 / span 2;
-}
-.Button.function {
-    color: white;
-    background: rgb(83, 81, 81)
-}
-.Button.operator{
-    background: -webkit-linear-gradient(rgb(221, 156, 17), rgb(223, 226, 17));
+.Button:hover {
+  background: rgb(184, 184, 184);
 }
 
+/*equal design*/
+.Button.equal {
+  width: 220px;
+  grid-column: 3 / span 2;
+}
+/*function design*/
+.Button.function {
+  color: white;
+  background: rgb(83, 81, 81);
+}
+.Button.function:hover {
+  background: rgb(122, 119, 119);
+}
+/*operator design*/
+.Button.operator {
+  background: -webkit-linear-gradient(rgb(221, 156, 17), rgb(223, 226, 17));
+}
+.Button.operator:hover {
+  background: -webkit-linear-gradient(rgb(219, 182, 102), rgb(219, 221, 104));
+}
+.Button:active {
+  color: rgb(253, 46, 46);
+}
