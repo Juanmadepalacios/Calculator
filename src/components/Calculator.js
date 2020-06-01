@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 
+import logo from './logo.png'
 import Button from "./Button";
 import "./Calculator.css";
+
 //useState target button
 const Calculator = () => {
   const [target, setTarget] = useState("0");
@@ -29,6 +31,12 @@ const Calculator = () => {
       setTarget((num / 100).toString());
       setSave(null);
       setOperator(null);
+      return;
+    }
+
+    if (value === "."){
+      if (value.includes('.')) return;
+      setTarget(target + '.');
       return;
     }
     //+ functionality
@@ -134,7 +142,8 @@ const Calculator = () => {
   // building the calculator structure
   return (
     <div className="Calculator">
-      <h1>23PEOPLE CALCULATOR</h1>
+      <img src={logo} alt="logo"/>
+      <h1>CALCULATOR</h1>
       <div className="display">{target}</div>
       <div className="buttons">
         <Button onClickButton={handleButton} value="AC" type="function" />
@@ -157,7 +166,6 @@ const Calculator = () => {
         <Button onClickButton={handleButton} value="," />
         <Button onClickButton={handleButton} value="=" type="operator" />
       </div>
-      <div className="buttom">-</div>
     </div>
   );
 };

@@ -3,12 +3,13 @@
     background: rgb(143, 142, 142);
     width: 100px;
     height: 90px;
-    border-radius: 120px;
+    border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 1000;
-    font-size: 30px;
+    font-weight: 750;
+    font-size: 45px;
+    font-family: 'Lucida Sans';
 }
 /*equal design*/
 .Button.equal {
@@ -20,6 +21,6 @@
     background: rgb(83, 81, 81)
 }
 .Button.operator{
-    background: red;
+    background: -webkit-linear-gradient(rgb(221, 156, 17), rgb(223, 226, 17));
 }
 
