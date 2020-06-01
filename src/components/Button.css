@@ -13,7 +13,7 @@
 }
 /*equal design*/
 .Button.equal {
-    width: 230px;
+    width: 220px;
     grid-column: 3 / span 2;
 }
 .Button.function {
