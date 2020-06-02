@@ -14,7 +14,7 @@ const Calculator = () => {
   //Function capture keys
   const targetKey = (value) => () => {
     const num = parseFloat(target);
-    //AC functionality
+    //C functionality
     if (value === "C") {
       setTarget("0");
       setSave(null);
