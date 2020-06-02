@@ -23,7 +23,7 @@ const Calculator = () => {
     }
     //± functionality
     if (value === "±") {
-      setTarget((num *(-1)).toString());
+      setTarget((num * -1).toString());
       return;
     }
     //% functionality
